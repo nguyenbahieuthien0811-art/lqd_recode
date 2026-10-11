@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- ============================================================
+  LQĐ Digital Companion – Người bạn đồng hành số
+  BƯỚC 1: Khung trang + Phần 1 (Hero) + Phần 2 (Hồ sơ số)
+  Các phần 3-9 sẽ được thêm vào sau, đúng vị trí đã đánh dấu.
+============================================================= -->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <!-- Dòng này giúp trang hiển thị đúng cỡ trên điện thoại -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LQĐ Digital Companion – Lê Quý Đôn Re:Code</title>
+  <meta name="description" content="Người bạn đồng hành số kỷ niệm 300 năm ngày sinh Lê Quý Đôn (1726-2026).">
+
+  <!-- Google Fonts: Charm (nét thư pháp, có tiếng Việt), Lora (chữ nội dung), JetBrains Mono (khung terminal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=JetBrains+Mono:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap&subset=vietnamese" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== THANH ĐIỀU HƯỚNG CỐ ĐỊNH ===== -->
+  <!-- Mỗi liên kết trỏ tới id của một phần (ví dụ #ho-so). Khi thêm phần mới, thêm một <a> ở đây. -->
+  <header class="nav">
+    <a class="nav__brand" href="#hero" aria-label="Về đầu trang">&lt;/&gt; LQĐ</a>
+    <nav class="nav__links" aria-label="Các phần của trang">
+      <a href="#hero">Mở đầu</a>
+      <a href="#ho-so">Hồ sơ số</a>
+      <a href="#thu-thach">Thử thách</a>
+      <a href="#nguon">Nguồn</a>
+      <!-- Sẽ thêm: Hành trình | Học như LQĐ | Câu hỏi | Nhật ký | Hỏi đáp | Huy hiệu -->
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ PHẦN 1: HERO ============ -->
+    <section id="hero" class="hero">
+      <!-- Con dấu đỏ son: họa tiết "ấn triện" -->
+      <div class="seal" aria-hidden="true">
+        <span class="seal__code">&lt;/&gt;</span>
+        <span class="seal__text">Re:Code</span>
+      </div>
+
+      <p class="hero__years">Lê Quý Đôn · 1726 – 2026</p>
+      <h1 class="hero__title">LQĐ Digital Companion</h1>
+      <p class="hero__sub">Người bạn đồng hành số – 300 năm một tinh thần học hỏi</p>
+
+      <!-- Khung terminal: hiệu ứng gõ chữ bằng CSS thuần.
+           --n là số ký tự của dòng đó (dùng cho steps() trong CSS).
+           --d là thời điểm dòng bắt đầu gõ (giây).
+           Sửa lời chào: đổi chữ VÀ đổi --n cho khớp số ký tự. -->
+      <div class="terminal" role="img" aria-label="Lời chào: Chào bạn! Mình là LQĐ, người bạn đồng hành số. Cùng ghi chép, cùng hỏi, cùng khám phá nhé?">
+        <div class="terminal__bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="terminal__body" aria-hidden="true">
+          <p class="type" style="--n:12; --d:0.3s"><span class="prompt">$</span> lqd.chao()</p>
+          <p class="type" style="--n:22; --d:1.4s">Chào bạn! Mình là LQĐ,</p>
+          <p class="type" style="--n:22; --d:3.2s">người bạn đồng hành số.</p>
+          <p class="type" style="--n:24; --d:5.0s">Cùng ghi chép, cùng hỏi,</p>
+          <p class="type type--last" style="--n:18; --d:6.9s">cùng khám phá nhé?</p>
+        </div>
+      </div>
+
+      <a class="btn" href="#ho-so">Bắt đầu hành trình</a>
+    </section>
+
+    <!-- ============ PHẦN 2: HỒ SƠ SỐ ============ -->
+    <section id="ho-so" class="section">
+      <h2 class="section__title">Hồ sơ số</h2>
+      <p class="section__lead">Cuộc đời và các tác phẩm chính của Lê Quý Đôn.
+        <strong class="check">Lưu ý:</strong> mọi dữ kiện bên dưới là nội dung mẫu, cần nhóm kiểm chứng với tài liệu chính thống.</p>
+
+      <!-- 2a. Dòng thời gian (đây thật sự là một chuỗi theo thời gian nên mới có các mốc) -->
+      <h3 class="sub">Dòng thời gian cuộc đời</h3>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__year">1726</span>
+          <div class="timeline__card">
+            <h4>Chào đời</h4>
+            <p>Nơi sinh: Lê Quý Đôn sinh ngày 2/8/1726, tên nhỏ là Lê Danh Phương, tại làng Diên Hà,
+              trấn Sơn Nam Hạ; sinh trong gia đình khoa bảng, cha là tiến sĩ Lê Trọng Thứ.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__year">1743-1752</span>
+          <div class="timeline__card">
+            <h4>Thời học tập</h4>
+            <p>Từ nhỏ nổi tiếng thông minh, ham học; 17 tuổi đỗ Giải nguyên.
+              Năm 1752 đỗ Hội nguyên và Bảng nhãn, mở đầu sự nghiệp quan trường.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__year">1753–1759</span>
+          <div class="timeline__card">
+            <h4>Ra làm quan</h4>
+            <p>Làm Thị thư Viện Hàn lâm, Toản tu Quốc sử quán; đi thanh tra Sơn Nam, tham gia việc quân sự;
+               được thăng Hàn lâm viện Thị giảng và biên soạn <i>Quần thư khảo biện</i>.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__year">1760-1762</span>
+          <div class="timeline__card">
+            <h4>Đi sứ</h4>
+            <p>Là Phó sứ sang nhà Thanh. Ông giao lưu học thuật, tiếp thu tri thức mới;
+              khi về nước được thăng Thừa chỉ Viện Hàn lâm, làm Học sĩ Bí thư các.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__year">1763-1784</span>
+          <div class="timeline__card">
+            <h4>Những năm cuối đời</h4>
+            <p>Giữ nhiều chức vụ lớn, làm việc tại Quốc Tử Giám, Quốc sử quán, Thuận Hóa và Nghệ An;
+              biên soạn các tác phẩm quan trọng như Bắc sứ thông lục, Toàn Việt thi lục, Phủ biên tạp lục,
+              Kiến văn tiểu lục. Ông mất năm 1784.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- 2b. Thẻ lật các tác phẩm chính.
+           Cách hoạt động: ô tick ẩn (checkbox) + nhãn (label). Chạm vào thẻ = tick/bỏ tick = lật.
+           Cách này chạy được cả trên iPhone và không cần JavaScript.
+           Tên tác phẩm là tên thường được nhắc tới; phần mô tả vẫn cần kiểm chứng. -->
+      <h3 class="sub">Tác phẩm chính <span class="hint">(chạm vào thẻ để lật)</span></h3>
+      <!-- Các thẻ tác phẩm được vẽ tự động từ data.js (biến TAC_PHAM) bởi script.js.
+           Muốn đổi ảnh, đổi chữ, thêm/bớt tác phẩm: sửa trong data.js, KHÔNG sửa ở đây. -->
+      <div class="works" id="works-list">
+        <noscript>Cần bật JavaScript để xem các tác phẩm.</noscript>
+      </div>
+    </section>
+
+    <!-- ============ PHẦN 3: THỬ THÁCH 300 NĂM ============ -->
+    <!-- Câu hỏi nằm trong data.js (biến QUIZ). Logic nằm trong script.js. -->
+    <section id="thu-thach" class="section">
+      <h2 class="section__title">Thử thách 300 năm</h2>
+      <p class="section__lead">Chuỗi câu hỏi về cuộc đời, tác phẩm và đóng góp của Lê Quý Đôn.
+        Mỗi câu đúng được cộng điểm. Làm xong để nhận huy hiệu.</p>
+
+      <div class="quiz">
+        <div class="quiz__status">
+          <span id="quiz-progress">Câu 1</span>
+          <span id="quiz-score">Điểm: 0</span>
+        </div>
+        <div class="quiz__box" id="quiz-box">
+          <!-- JavaScript sẽ hiện câu hỏi vào đây -->
+          <noscript>Cần bật JavaScript để chơi thử thách.</noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NGUỒN THAM KHẢO ============ -->
+    <!-- Danh sách nguồn nằm trong data.js (biến NGUON). Thêm nguồn mới ở đó. -->
+    <section id="nguon" class="section">
+      <h2 class="section__title">Nguồn tham khảo</h2>
+      <p class="section__lead" id="nguon-luuy"></p>
+      <ol class="nguon" id="nguon-list">
+        <!-- JavaScript sẽ hiện các nguồn vào đây -->
+      </ol>
+      <noscript>Cần bật JavaScript để xem danh sách nguồn.</noscript>
+    </section>
+
+    <!-- ===== CÁC PHẦN TIẾP THEO SẼ ĐƯỢC THÊM VÀO ĐÂY Ở CÁC BƯỚC SAU ===== -->
+
+  </main>
+
+  <!-- Footer tạm thời; phần 9 (nguồn tài liệu & nhóm thực hiện) sẽ làm đầy đủ sau -->
+  <footer class="footer">
+    <p>Lê Quý Đôn Re:Code · Dự án Ngữ văn · 1726 – 2026</p>
+  </footer>
+
+  <!-- data.js phải đứng TRƯỚC script.js vì script.js dùng dữ liệu của data.js -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
